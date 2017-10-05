@@ -37,7 +37,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Arquillian.class)
 @TemplateResources(templates = {
-    @Template(url = "file://${base.dir}/src/test/resources/templates/database.yml")
+    @Template(url = "file://${basedir}/.openshiftio/service.yaml"),
+    @Template(url = "file://${basedir}/target/classes/META-INF/fabric8/openshift.yml")
   },
   syncInstantiation = false
 )
