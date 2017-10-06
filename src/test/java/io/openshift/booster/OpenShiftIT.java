@@ -49,7 +49,7 @@ public class OpenShiftIT {
 
   @Before
   public void setup() {
-    RestAssured.baseURI = url + "/api/fruits";
+    RestAssured.baseURI = url + "api/fruits";
   }
 
   @Test
