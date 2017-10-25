@@ -28,20 +28,12 @@ import java.util.Collections;
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.http.ContentType;
 import org.arquillian.cube.openshift.impl.enricher.RouteURL;
-import org.jboss.arquillian.ce.api.Template;
-import org.jboss.arquillian.ce.api.TemplateResources;
 import org.jboss.arquillian.junit.Arquillian;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(Arquillian.class)
-@TemplateResources(templates = {
-    @Template(url = "file://${basedir}/.openshiftio/service.yaml"),
-    @Template(url = "file://${basedir}/target/classes/META-INF/fabric8/openshift.yml")
-  },
-  syncInstantiation = false
-)
 public class OpenShiftIT {
 
   @RouteURL("spring-boot-crud")

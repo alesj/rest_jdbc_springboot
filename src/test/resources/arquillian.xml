@@ -4,7 +4,8 @@
 
   <extension qualifier="openshift">
     <property name="namespace.use.current">true</property>
-    <property name="env.init.enabled">false</property>
+    <property name="env.init.enabled">true</property>
+    <property name="env.dependencies">file://${basedir}/.openshiftio/service.yaml</property>
   </extension>
 
 </arquillian>
